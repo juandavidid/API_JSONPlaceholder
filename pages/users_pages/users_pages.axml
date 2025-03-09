@@ -1,0 +1,28 @@
+<view class="container-One">
+  <view class="header">
+    <!--Texto-->
+    <view class="text-Users">
+      <text >Usuarios</text>
+    </view>
+    
+    <view class="container-icon-search_bar" > 
+      <!--Iconos Buscador-->
+      <ant-icon type="SearchOutline" style="color:#8696a0; position:absolute; top:25px; left:33px; z-index:4; font-size:20px;"></ant-icon>
+      <!--Barra de Busqueda-->
+      <input class="search_bar" onInput="onSearchInput" placeholder="Buscar" placeholder-style="padding-left:32px; background-color:#202c33; color:#8696a0; border-radius:8px; " />
+    </view>
+  </view>
+  <view class="contenido-user">
+    
+    <!--Scroll Movimiento-->
+    <scroll-view scroll-y ={{true}} style="height:529px">
+
+      <!--Componentes Estructural- informacion Usuarios-->
+      <info-users filteredUsersInput="{{filteredUsers}}"  />
+      
+    </scroll-view>
+  </view>
+  <view class="footer">
+    CONTENEDOR 2
+  </view>
+</view>

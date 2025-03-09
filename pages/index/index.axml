@@ -1,3 +1,43 @@
-<view>
-  this is a blank page
+<view style="width:100vw; background-color:#111b21;">
+  <view class="container-obt-datos" style="margin-top:126px;">
+    <navigator url="/pages/users_pages/users_pages">
+      <view style="width:100px; height:100px; overflow:hidden; border-radius: 50px;">
+        <image  src="https://st3.depositphotos.com/3538469/15750/i/450/depositphotos_157501024-stock-photo-business-man-icon.jpg"  style="background-color: #eeeeee; width: 100px; height:100px; object-fit: cover; border-radius: 50px;"/>
+      </view>
+    </navigator>
+    <text>Usuarios</text>
+  </view>
+
+  <view class="container-obt-datos">
+    <navigator url="/pages/users_pages/users_pages">
+      <view style="width:100px; height:100px; overflow:hidden; border-radius: 50px;">
+        <image  src="https://cdn-icons-png.flaticon.com/512/326/326020.png"  style="background-color: #eeeeee; width: 100px; height:100px; object-fit: cover; border-radius: 50px;"/>
+      </view>
+    </navigator>
+    <text>Posts</text>
+  </view>
+
+  
+
+  
+
+  <view class="container-two" a:for="{{ dataApiPosts.data.slice(0 , limit) }}" a:for-index="item" >
+    
+    <text class="text-block">Userid : <text/>   <text> {{item.userId}}  </text> 
+    <text class="text-block">Id : <text/>   <text>{{item.id}} </text>   
+    <text class="text-block">Titulo : <text/>    <text> {{item.title}}</text>
+    <text class="text-block">Body:  <text/>  <text> {{item.body}} </text> 
+
+    
+  </view>
+
+  
+
+
+
+
+  
+
+  
 </view>
+

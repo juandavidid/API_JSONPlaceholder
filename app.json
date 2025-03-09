@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/index/index"
+    
+    "pages/index/index",
+    "pages/users_pages/users_pages"
   ],
   "window": {
     "defaultTitle": "My App"

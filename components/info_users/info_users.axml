@@ -1,0 +1,63 @@
+<view class="container-users" a:for="{{ arrayData.slice(0,limit) }}" a:for-item="item" a:key="*this"  >
+  
+
+  <view class="container-clickModal" onTap="openModal" data-value="{{item}}">
+    <!--Icono o Imagen Usuario-->
+    <!---<ant-icon type="UserCircleOutline" style="font-size:50px; margin-left:8px;margin-top:8px;"></ant-icon>-->
+
+   <view style="width:50px; height:50px; overflow:hidden; border-radius: 50px; margin-top:8px; margin-left:8px">
+     <image  src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-icon-download-in-svg-png-gif-file-formats--user-student-avatars-flat-icons-pack-people-456332.png"  style="background-color: #eeeeee; width: 50px; height:50px; object-fit: cover; border-radius: 50px;"/>
+   </view>
+  
+   <!--Informacion Usuario-->
+   <view class="container-data" >
+    <text style="letter-spacing:1px;">{{item.name}} </text>
+    <text style="color:#898e91; font-size:12px;">City: {{item.address.city}}</text>
+   </view>
+   <!--ID Usuario-->
+   <view class="id_user">
+    <text >{{item.id}}</text>
+   </view>
+    
+  </view>
+
+  <!--Ventana Modal-->
+  <view>
+    
+    <modal
+      show="{{modalOpened}}"
+      onModalClose="onModalClose"
+      class="modal-style"
+    >
+      <view class="container-modal">
+        <!-- Uusarios Imagenes y Nombre -->
+        <view class="cont-img-title">
+          <view style="width:100px; height:100px; overflow:hidden; border-radius: 50px; margin-top:32px; margin-left:90px; margin-bottom:2px;">
+            <image  src="https://cdn.iconscout.com/icon/free/png-256/free-avatar-icon-download-in-svg-png-gif-file-formats--user-student-avatars-flat-icons-pack-people-456332.png"  style="background-color: #eeeeee; width: 100px; height:100px; object-fit: cover; border-radius: 50px;"/>
+          </view>
+          <text style="letter-spacing:1px; font-size:20px;">{{objectUsers.name}} </text>
+        </view>
+
+        <view class="cont-img-title" >
+
+          <view style=" display:flex;">
+
+            <view style="display:flex; flex-direction:column; width:100px; gap:7px; padding-top:4px;">
+              <ant-icon type="UserOutline" style="font-size:20px" ></ant-icon>
+              <ant-icon type="MailOutline" style="font-size:20px"></ant-icon>
+              <ant-icon type="PhonebookOutline" style="font-size:20px"></ant-icon>
+              <ant-icon type="GlobalOutline" style="font-size:20px"></ant-icon>
+              
+            </view>
+            <view style="display:flex; flex-direction:column; width:235px;  gap:8px; text-align:left; padding-top:2px; font-size:15px;">
+              <text>{{objectUsers.username}}</text>
+              <text>{{objectUsers.email}}</text>
+              <text>{{objectUsers.phone}}</text>
+              <text>{{objectUsers.website}}</text>
+            </view>    
+          </view>
+        </view>
+      <view slot="footer" onTap="onModalClick"  style="color:white;  border-radius:10px; width:150px; height:25px;  background-color:#111b21;margin-left:60px;padding-top:8px;">REGRESAR</view>
+    </modal>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "antd-mini": "^3.1.7",
+    "install": "^0.13.0",
+    "mini-antui": "^0.5.4"
+  }
+}

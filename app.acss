@@ -3,3 +3,10 @@ page {
   display: flex;
   background: #f7f7f7;
 }
+
+@font-face{
+  font-family: "Poltawski";
+  src:url("/assents/fonts/PoltawskiNowy-VariableFont_wght.ttf") format("opentype")
+
+
+}

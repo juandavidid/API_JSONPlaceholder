@@ -1,0 +1,54 @@
+.container-users, .container-clickModal{
+  
+  height: 78px;
+  border-bottom: 1px solid black;
+  display:flex;
+  gap:8px
+}
+
+.container-data{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  margin-top: 12px;
+  width: 145px;
+  color:white;
+}
+
+.id_user{
+  margin-left: 142px;
+  margin-top: 12px;
+  color:white;
+
+  
+}
+
+/*---Estilo Ventana Modal--*/
+.modal-style{
+
+  width: 314px;
+  height: 470px;
+  background-color: #0c1317;
+  
+
+}
+
+.container-modal{
+  width: 283px;
+  height: 453px;
+  
+  margin-left: 1px;
+}
+
+.cont-img-title{
+  width: 283px;
+  height: 171px;
+  
+  margin-bottom:21px;
+  background-color: #111b21;
+  color: white;
+  padding-top:5px
+}
+
+/*--Estilo de Iconos--*/
+

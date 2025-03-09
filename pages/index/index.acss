@@ -1,0 +1,29 @@
+.container-two{
+  width: 100vw;
+  height: 150px;
+  border:2px solid;
+}
+
+.container-obt-datos{
+  border:1px solid black;
+  margin-top:48px;
+  height: 200px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #2F4F4F;
+  margin-left: 85px;
+  margin-right: 85px;
+  border-radius: 14px;
+}
+
+
+
+.btn-obt-datos{
+  width: 50px;
+}
+
+.text-block{
+  display: block
+}

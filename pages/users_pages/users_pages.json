@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "AntUI Component Library",
+  "usingComponents": {
+    "ant-icon":"/node_modules/antd-mini/es/Icon/index",
+    "info-users":"/components/info_users/info_users",
+    "modal": "mini-antui/es/modal/index"
+
+  },
+  "styleIsolation": "shared"
+}
