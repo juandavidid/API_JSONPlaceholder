@@ -15,66 +15,46 @@ Page({
     posts:""
     
   },
-
- 
   // 1.Funcion Abrir Modal - Obtener Data API - POSTS
   openModal(){
-
     const resourcesUrl = config.POSTS_URL // obtener users VARIABLES ENTORNO
     requestAPI('GET',resourcesUrl).then(data =>{  // peticion a la API
       this.setData({
-        dataApiPosts:data // Guardar peticion - Mostrar los datos
+        dataApiPosts:data, // Guardar peticion - Mostrar los datos
+        //posts:this.data.dataApiPosts.data[0].body
+        posts:data.data.length > 0 ? data.data[0].body : "No hay posts disponibles"
       })
 
     }).catch(error => { console.error("Error al obtener los datos:", error);})
-
-    console.log("OBTENER DATA POSTS",this.data.dataApiPosts);
-
     this.setData({
       modalOpened:true
     })
-
-    // Posts Inicial Cuando Inicia la pagina
-    this.setData({
-      posts:this.data.dataApiPosts.data[0].body
-    })
-    console.log("DATO DE LA VARIABLE",this.data.posts)
+    
   },
   onModalClick() {
-
-    console.log("HOLA SOY LA FUNCION CLICK")
-
-    
     this.setData({
       modalOpened: false,
     });
   },
-
   onModalClose() {
-
-    console.log("HOLA SOY LA FUNCION cerrar")
-
     this.setData({
       modalOpened: false,
     });
   },
-
   // 2. Funcion - Generar numero aleatorio
   clickRandom(){
     let numeroAleatorio = Math.floor(Math.random()*100)
-    console.log("NUMERO ALEATORIO",numeroAleatorio);
-
     this.setData({
       posts:this.data.dataApiPosts.data[numeroAleatorio].body
     })
   },
-
   // 3. Funcion - Copiar texto en Portapapeles
   copyBoard(){
-
+    
     my.setClipboard({
       text:this.data.posts,
       success: ()=>{
+        console.log(this.data.posts);
         my.showToast({
           content:"Texto copiado al portapapeles"
         })
@@ -85,20 +65,12 @@ Page({
     })
 
   },
-
-
-  
   onLoad(query) {
     // Page load
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
-    
-    
-    
   },
   onReady() {
     // Page loading is complete
-    
-    
   },
   onShow() {
     // Page display
