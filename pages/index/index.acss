@@ -27,3 +27,42 @@
 .text-block{
   display: block
 }
+
+
+/*---Estilo Ventana Modal--*/
+.modal-style{
+
+  width: 314px;
+  height: 490px;
+  background-color: #0c1317;
+  margin-bottom: 58px;
+  
+
+}
+
+
+
+.cont-img-title{
+  width: 283px;
+  height: 171px;
+  
+  margin-bottom:21px;
+  background-color: #111b21;
+  color: white;
+  padding-top:35px;
+  margin-top:-51px;
+  border-radius:8px;
+  font-size: 18px;
+}
+
+
+/*---Estilo Texto posts--*/
+.text-posts{
+  width:100px;
+  height:100px;
+  color:white;
+  padding-top:32px;
+  text-align: left;
+  font-size: 28px;
+
+}

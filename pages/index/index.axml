@@ -8,8 +8,8 @@
     <text>Usuarios</text>
   </view>
 
-  <view class="container-obt-datos">
-    <navigator url="/pages/users_pages/users_pages">
+  <view class="container-obt-datos" onTap="openModal">
+    <navigator url="">
       <view style="width:100px; height:100px; overflow:hidden; border-radius: 50px;">
         <image  src="https://cdn-icons-png.flaticon.com/512/326/326020.png"  style="background-color: #eeeeee; width: 100px; height:100px; object-fit: cover; border-radius: 50px;"/>
       </view>
@@ -17,26 +17,33 @@
     <text>Posts</text>
   </view>
 
-  
-
-  
-
-  <view class="container-two" a:for="{{ dataApiPosts.data.slice(0 , limit) }}" a:for-index="item" >
+  <!--Ventana Modal-->
+  <view>
     
-    <text class="text-block">Userid : <text/>   <text> {{item.userId}}  </text> 
-    <text class="text-block">Id : <text/>   <text>{{item.id}} </text>   
-    <text class="text-block">Titulo : <text/>    <text> {{item.title}}</text>
-    <text class="text-block">Body:  <text/>  <text> {{item.body}} </text> 
+    <modal
+      show="{{modalOpened}}"
+      onModalClose="onModalClose"
+      class="modal-style"
+    >
+      
+      <!--Texto-->
+      <view class="text-posts">
+        <text>Posts</text>
+      </view>
+      <!-- Uusarios Imagenes y Nombre -->
+      <view class="cont-img-title">
+        <text>{{posts}}</text>
+      </view>
+       
+      <view style="display:flex; width:283; gap:4px; justify-content:center">
+        <button size="default" type="primary" style="width:101px; font-size:18px; height:43px;border-radius:13px" onTap="clickRandom">Random</button>
+        <button size="default" type="primary" style="width:101px; font-size:18px; height:43px;border-radius:13px" onTap="copyBoard">Share</button>
+      </view>
+        
+      <view  onTap="onModalClick"  style="color:white;  border-radius:10px; width:150px; height:25px;  background-color:#111b21;margin-left:60px;padding-top:8px;margin-top:52px" >REGRESAR</view>
 
-    
+    </modal>
   </view>
-
-  
-
-
-
-
-  
 
   
 </view>

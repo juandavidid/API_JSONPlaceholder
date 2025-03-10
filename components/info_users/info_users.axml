@@ -1,4 +1,4 @@
-<view class="container-users" a:for="{{ arrayData.slice(0,limit) }}" a:for-item="item" a:key="*this"  >
+<view class="container-users" a:for="{{ arrayData.slice(0,limit) }}" a:for-item="item"   >
   
 
   <view class="container-clickModal" onTap="openModal" data-value="{{item}}">

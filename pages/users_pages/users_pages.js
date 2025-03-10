@@ -22,6 +22,8 @@ Page({
       filteredUsers: filtered
     });
 
+    console.log("LISTA FILTRADA",this.data.filteredUsers);
+
     
 
   },
